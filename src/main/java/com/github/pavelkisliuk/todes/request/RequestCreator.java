@@ -1,8 +1,13 @@
 package com.github.pavelkisliuk.todes.request;
 
 import com.github.pavelkisliuk.todes.entity.*;
+import com.github.pavelkisliuk.todes.repository.Factory;
+import com.github.pavelkisliuk.todes.repository.Repository;
+
+import java.util.List;
 
 public class RequestCreator {
+	private static final Repository REPOSITORY = new Repository();
 	private StringBuilder request;
 
 	public static class Request {
@@ -77,7 +82,7 @@ public class RequestCreator {
 		return request.toString();
 	}
 
-//	public Todes getEntity() {
-//		return entity;
-//	}
+	public List<Todes> getEntities(Factory<Todes> factory) {
+		return REPOSITORY.query(getRequest(), factory);
+	}
 }

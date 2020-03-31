@@ -32,7 +32,7 @@ CREATE TABLE Contacts
 
 INSERT INTO Contacts (person_id, phone, email, github, skype, linkedin)
 VALUES (1, '+375(29)123-45-67', 'petrovich@gmail.com', 'http://github.com/petya', null, null),
-       (2, '+375(29)87-65-43', null, ' http://github.com/vanya', 'skype:ivanko', null),
+       (2, '+375(29)87-65-43', null, 'http://github.com/vanya', 'skype:ivanko', null),
        (3, '+375(29)999-99-99', null, null, null, 'https://www.linkedin.com/in/mariya/');
 
 CREATE TABLE Technologies
