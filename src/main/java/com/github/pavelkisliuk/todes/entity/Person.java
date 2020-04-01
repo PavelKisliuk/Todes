@@ -1,10 +1,33 @@
 package com.github.pavelkisliuk.todes.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.sql.Date;
 import java.util.Objects;
 
-public class Person implements Todes{
+/**
+ * The {@code Person} class is {@code Todes} realization as entity of table
+ * Person in database.
+ * <p>
+ *
+ * @author Kisliuk Pavel Sergeevich
+ * @see Todes
+ * @see Cv
+ * @see Contacts
+ * @see Technologies
+ * @since 13.0
+ */
+
+@Entity
+public class Person implements Todes {
+	/**
+	 * Name of table for this entity in database.
+	 */
 	public static final String TABLE_NAME = "Person";
+
+	/**
+	 * Name of id of the table for this entity in database.
+	 */
 	public static final String ID_NAME = "person_id";
 
 	private Long id;
@@ -14,6 +37,7 @@ public class Person implements Todes{
 	private Date birthday;
 	private boolean male;
 
+	@Id
 	public Long getId() {
 		return id;
 	}
