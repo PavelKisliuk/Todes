@@ -1,9 +1,32 @@
 package com.github.pavelkisliuk.todes.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
-public class Contacts implements Todes{
+/**
+ * The {@code Contacts} class is {@code Todes} realization as entity of table
+ * Contacts in database.
+ * <p>
+ *
+ * @author Kisliuk Pavel Sergeevich
+ * @see Todes
+ * @see Cv
+ * @see Person
+ * @see Technologies
+ * @since 13.0
+ */
+
+@Entity
+public class Contacts implements Todes {
+	/**
+	 * Name of table for this entity in database.
+	 */
 	public static final String TABLE_NAME = "Contacts";
+
+	/**
+	 * Name of id of the table for this entity in database.
+	 */
 	public static final String ID_NAME = "contact_id";
 
 	private Long id;
@@ -14,6 +37,7 @@ public class Contacts implements Todes{
 	private String skype;
 	private String linkedin;
 
+	@Id
 	public Long getId() {
 		return id;
 	}
