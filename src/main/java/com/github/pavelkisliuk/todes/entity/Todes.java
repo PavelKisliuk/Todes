@@ -5,12 +5,13 @@ package com.github.pavelkisliuk.todes.entity;
  * entities in database.
  * <p>
  *
+ * @author Kisliuk Pavel Sergeevich
  * @see Cv
  * @see Person
  * @see Contacts
  * @see Technologies
- * @author Kisliuk Pavel Sergeevich
  * @since 13.0
  */
 
-public interface Todes {}
+public interface Todes {
+}
