@@ -1,9 +1,32 @@
 package com.github.pavelkisliuk.todes.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
-public class Technologies implements Todes{
+/**
+ * The {@code Technologies} class is {@code Todes} realization as entity of table
+ * Technologies in database.
+ * <p>
+ *
+ * @author Kisliuk Pavel Sergeevich
+ * @see Todes
+ * @see Cv
+ * @see Person
+ * @see Contacts
+ * @since 13.0
+ */
+
+@Entity
+public class Technologies implements Todes {
+	/**
+	 * Name of table for this entity in database.
+	 */
 	public static final String TABLE_NAME = "Technologies";
+
+	/**
+	 * Name of id of the table for this entity in database.
+	 */
 	public static final String ID_NAME = "technology_id";
 
 	private Long id;
@@ -17,6 +40,7 @@ public class Technologies implements Todes{
 	private boolean html;
 	private boolean maven;
 
+	@Id
 	public Long getId() {
 		return id;
 	}
