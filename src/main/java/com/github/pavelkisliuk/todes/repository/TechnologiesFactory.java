@@ -1,12 +1,34 @@
 package com.github.pavelkisliuk.todes.repository;
 
 import com.github.pavelkisliuk.todes.entity.Technologies;
-import com.github.pavelkisliuk.todes.entity.Todes;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * The {@code TechnologiesFactory} class is {@code Factory} realization for {@code Technologies} class
+ * creation.
+ * <p>
+ *
+ * @author Kisliuk Pavel Sergeevich
+ * @see Factory
+ * @see CvFactory
+ * @see PersonFactory
+ * @see ContactsFactory
+ * @see Technologies
+ * @since 13.0
+ */
+
 public class TechnologiesFactory implements Factory<Technologies> {
+
+	/**
+	 * Create instance of {@code Technologies} class used {@code ResultSet}.
+	 * <p>
+	 *
+	 * @param resultSet is {@code ResultSet} with data for class creation.
+	 * @return instance of {@code Technologies} class.
+	 * @throws SQLException if {@code SQLException} occurred.
+	 */
 	@Override
 	public Technologies create(ResultSet resultSet) throws SQLException {
 		Technologies technologies = new Technologies();
