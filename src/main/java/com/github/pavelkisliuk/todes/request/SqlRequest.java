@@ -2,7 +2,7 @@ package com.github.pavelkisliuk.todes.request;
 
 /**
  * The {@code SqlRequest} class is {@code Requestable} realization for
- * SQL request creation and receiving data by this request.
+ * SQL request creation.
  * <p>
  *
  * @author Kisliuk Pavel Sergeevich
