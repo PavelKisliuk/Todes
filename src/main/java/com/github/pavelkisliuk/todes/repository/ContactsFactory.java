@@ -20,7 +20,6 @@ import java.sql.SQLException;
  */
 
 public class ContactsFactory implements Factory<Contacts> {
-
 	/**
 	 * Create instance of {@code Contacts} class used {@code ResultSet}.
 	 * <p>
